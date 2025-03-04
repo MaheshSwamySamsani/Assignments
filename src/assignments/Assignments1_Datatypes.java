@@ -19,7 +19,7 @@ public class Assignments1_Datatypes {
 		System.out.println("Whether a customer has placed an order: " + HasNotPlacedAnOrder);
 
 		// 3 Person's phone number: "123-456-7890"
-		long phoneNumber = 1234567890;
+		String  phoneNumber = "123-456-7890";
 		System.out.println("Person's phone number:" + phoneNumber);
 
 		// 4 Amount of money in a customer's bank account: 1000.50
@@ -62,7 +62,7 @@ public class Assignments1_Datatypes {
 
 		// 11.Number of followers on a social media platform: 1,000,000
 
-		int followers = 1000000;
+		String followers = "1,000,000";
 		System.out.println("Number of followers on a social media platform:" + followers);
 
 		// 12.Rating of a movie: 7.5
@@ -80,6 +80,7 @@ public class Assignments1_Datatypes {
 		String Title = "To Kill a Mockingbird";
 
 		System.out.println("Title of a book:" + Title);
+		
 
 		// 15.Number of employees in a company: 500
 
