@@ -27,7 +27,7 @@ public class Assignments2_Arrays5 {
 		};
 		//Print Semester 3 - Subject 4 and Subject 5 Names.
 		System.out.println("Semester 3-Subject 4:"+Subjects[2][3][0]);
-		System.out.println("Semester 3-Subject 5:"+Subjects[2][4][0]);
+		System.out.println("Semester 3-Subject 5:"+Subjects[2][4][0]); 
 		
 		//Print Semester 5 - Subject 3 and Subject 6 marks
 		System.out.println("Semester 5-Subject 3:"+Subjects[4][2][1]);
