@@ -24,12 +24,12 @@ public class EmpGroups {
      // Store employee IDs in an array
         int[] empIds = {obj.empId1, obj.empId2, obj.empId3};
         
-        System.out.print("Employee Names: " + empNames[0] );
-        System.out.println(",  Employee IDs: " + empIds[0]);
-        System.out.print("Employee Names: " + empNames[1] );
-        System.out.println(",   Employee IDs: " + empIds[1]);
-        System.out.print("Employee Names: " + empNames[2] );
-        System.out.println(",   Employee IDs: " + empIds[2]);
+        System.out.println("Employee Names: " + empNames[0] );
+        System.out.println("Employee IDs: " + empIds[0]);
+        System.out.println("Employee Names: " + empNames[1] );
+        System.out.println("Employee IDs: " + empIds[1]);
+        System.out.println("Employee Names: " + empNames[2] );
+        System.out.println("Employee IDs: " + empIds[2]);
     
     	
 
