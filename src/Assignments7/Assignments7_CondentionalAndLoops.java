@@ -28,68 +28,45 @@ Loops and conditional statements
 Transaction with Amount” and also print total number of suspicious transactions
 		 */
 		
-		List<Integer> credit = new ArrayList<Integer>();
-		
-		credit.add(50000);
-		credit.add(3000);
-		credit.add(4000);
-		
-		List<Integer> debit = new ArrayList<Integer>();
-		debit.add(-2000);
-		debit.add(-15000);
-		debit.add(-200);
-		debit.add(-3000);
-		debit.add(-300);
-		
-		//total number of credit and debit transactions completed
-		System.out.println("Total number of credit transcetions: "+ credit.size());
-		System.out.println("Total number of debit transcetions: "+ debit.size());
-		Integer Total =  +credit.size() +debit.size();
-		System.out.println("Total transactions completed: " + Total);
-		
-		System.out.println("*******************************************************");
-		
-		//Print the total amount credited and debited in account
-		//Print the total amount credited
-		for (int i=0; i<3 ;i++){
-		System.out.println("total amount credited: "+credit.get(i));
-		}
-		Integer credit1= credit.get(0)+credit.get(1)+credit.get(2);
-		System.out.println("Total amout credeted:"+ credit1);
-		System.out.println("*******************************************************");
-		//Print the total amount debited
-		for (int j=0; j<=4;j++) {
-		System.out.println("total amount debited: "+debit.get(j));
-		}
-		Integer debit1= debit.get(0)+debit.get(1)+debit.get(2)+debit.get(3)+debit.get(4);
-		System.out.println("Total amout debited:"+ debit1);
-		System.out.println("*******************************************************");
-		
-		//3. Print total amount remaining at the end in Bank Account
-		
-		Integer total1= credit1+debit1;
-		System.out.println("total amount remaining: "+ total1);
-		System.out.println("*******************************************************");
-		
-		
-		//4. If any transaction limit exceeds +/- 10000 then print the message “Suspicious credit/ debit Transaction with Amount” and also print total number of suspicious transactions
-		
-		//Credit Amount
-		for (int i=0; i<3; i++) {
-			if (credit.get(i)>10000) {
-				System.out.println("Suspicious credit Transaction: "+credit.get(i));
-			}
-			
-		}
-		
-		//debit Amount
-				for (int j=0; j<4; j++) {
-					if (debit.get(j)<-10000) {
-						System.out.println("Suspicious debit Transaction: "+debit.get(j));
+		// Store transactions in an array
+				int[] transactions = { 50000, -2000, 3000, -15000, -200, -300, 4000, -3000 };
+
+				// Variables to store totals
+				int totalCredits = 0;
+				int totalDebits = 0;
+				int totalCreditAmount = 0;
+				int totalDebitAmount = 0;
+				int suspiciousTransactions = 0;
+
+				// Process transactions
+				for (int amount : transactions) {
+					if (amount > 0) { // Credit
+						totalCredits++;
+						totalCreditAmount += amount;
+						if (amount > 10000) {
+							System.out.println("Suspicious credit transaction with Amount: " + amount);
+							suspiciousTransactions++;
+						}
+					} else { // Debit
+						totalDebits++;
+						totalDebitAmount -= amount;
+						if (amount < -10000) {
+							System.out.println("Suspicious debit transaction with Amount: " + amount);
+							suspiciousTransactions++;
+						}
 					}
-					
 				}
-		
+
+				// Calculate the final remaining amount in the account
+				int finalBalance = totalCreditAmount - totalDebitAmount;
+
+				// Output the results
+				System.out.println("Total number of credit transactions: " + totalCredits);
+				System.out.println("Total number of debit transactions: " + totalDebits);
+				System.out.println("Total amount credited: " + totalCreditAmount);
+				System.out.println("Total amount debited: " + totalDebitAmount);
+				System.out.println("Final remaining amount in the account: " + finalBalance);
+				System.out.println("Total number of suspicious transactions: " + suspiciousTransactions);
 		
 		
 
